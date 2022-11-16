@@ -3,10 +3,16 @@ import java.util.Scanner;
 
 public class FindMaxInSeq {
     public static int max() {
-
-        // Put your code here
-
-        return 0;
+        Scanner scan = new Scanner(System.in);
+        int maxSoFar = scan.nextInt();
+        int currValue;
+        do {
+            currValue = scan.nextInt();
+            if (currValue > maxSoFar && currValue != 0) {
+                maxSoFar = currValue;
+            }
+        } while (currValue != 0);
+        return maxSoFar;
     }
 
     public static void main(String[] args) {
